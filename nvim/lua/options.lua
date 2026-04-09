@@ -13,6 +13,8 @@ o.list = true
 o.listchars = "tab:↠ ,trail:.,extends:#,nbsp:."
 o.shiftwidth = 0
 o.expandtab = false
+o.smoothscroll = true
+
 --
 -- o.spell = true
 -- o.spelllang = "en_us"

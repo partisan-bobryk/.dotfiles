@@ -36,8 +36,9 @@
   line-numbers = true
 
 [merge]
-  conflictstyle = zdiff3
-
+  conflictstyle = diff3
+  tool = nvimdiff
+  prompt = false
 [push]
   autoSetupRemote = true
 [pull]
@@ -46,3 +47,4 @@
   gpgsign = true
 [include]
   path = "~/.git-identities/profiles"
+
