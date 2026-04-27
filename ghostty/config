@@ -9,7 +9,8 @@ theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 
 # Font 
 font-family = "Monaco"
-font-size = 13
+# font-family = "Geist Mono"
+font-size = 12
 font-thicken = true
 
 # Cursor
