@@ -1,7 +1,6 @@
 [user]
   useConfigOnly = true
-	name = Maks Yadvinskyy
-	email = maks@revent.studio
+  name = Maks Yadvinskyy
 [init]
   defaultBranch = main
 [filter "lfs"]
@@ -20,13 +19,12 @@
   res = !git reset --hard
   done = !git push origin HEAD
   log = history --oneline
-  identity = "! git config user.name \"$(git config user.$1.name)\"; git config user.email \"$(git config user.$1.email)\"; git config user.signingkey \"$(git config user.$1.signingkey)\"; :"
-  identity2 = !git-identity
+  identity = !git-identity
 
 [core]
   editor = nvim
   pager = delta
-	excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
 
 [interactive]
   diffFilter = delta --color-only
@@ -46,6 +44,9 @@
   rebase = false
 [commit]
   gpgsign = true
+
+[gpg]
+  format = ssh
+
 [include]
   path = "~/.git-identities/profiles"
-
