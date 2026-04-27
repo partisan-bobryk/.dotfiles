@@ -41,9 +41,17 @@ mkdir -p $TMUX
 # Make directory for ghostty 
 mkdir -p $CONFIG/ghostty
 
+
+log_start "🍌 Creating device specific shell config overrides..."
+local_shell_configs=("$HOME/.zshenv.local" "$HOME/.zshrc.local")
+
+for shell_config in "${local_shell_configs[@]}"; do 
+    [[ -f "$shell_config" ]] && log_end "Skipping $shell_config creation." || (touch "$shell_config" && log_end "Created $shell_config")
+done
+
 log_start "🔗 Symlinking dotfiles..."
 symlink $DOT/zsh/.zshrc $HOME/.zshrc
-symlink $DOT/zsh/.zprofile $HOME/.zprofile
+symlink $DOT/zsh/.zshenv $HOME/.zshenv
 symlink $DOT/tmux/tmux.conf $TMUX/tmux.conf
 symlink $DOT/tmux/tmux.conf.local $TMUX/tmux.conf.local
 symlink $DOT/.gitconfig $HOME/.gitconfig

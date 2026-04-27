@@ -100,3 +100,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Expose brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Load local overrides
+[[ -f "$HOME/.zshrc.local" ]] && source $HOME/.zshrc.local
+

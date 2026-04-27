@@ -21,6 +21,7 @@
   done = !git push origin HEAD
   log = history --oneline
   identity = "! git config user.name \"$(git config user.$1.name)\"; git config user.email \"$(git config user.$1.email)\"; git config user.signingkey \"$(git config user.$1.signingkey)\"; :"
+  identity2 = !git-identity
 
 [core]
   editor = nvim

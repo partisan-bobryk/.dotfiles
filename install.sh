@@ -11,7 +11,7 @@ function eval_brew() {
     eval "$(/opt/homebrew/bin/brew shellenv 2>&1)" > /dev/null
 }
 
-REPO_URL=https://github.com/partisan-bobryk/.dotfiles.git
+REPO_URL=https://github.com/vepr-ua/.dotfiles.git
 INSTALL_PATH=$HOME/.dotfiles
 
 if ! eval "$(which xcode-select)" -v > /dev/null; then
