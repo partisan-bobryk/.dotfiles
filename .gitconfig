@@ -43,10 +43,10 @@
 [pull]
   rebase = false
 [commit]
-  gpgsign = true
+	gpgsign = true
 
 [gpg]
-  format = ssh
+	format = ssh
 
 [include]
   path = "~/.git-identities/profiles"
