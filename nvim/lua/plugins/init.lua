@@ -1,5 +1,12 @@
 return {
   {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("nvchad.configs.lspconfig").defaults()
+      require "configs.lspconfig"
+    end,
+  },
+  {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
     config = function()
@@ -29,14 +36,6 @@ return {
       }
     end,
     lazy = false,
-  },
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      -- Commented out the nvchad defaults as they conflict with lsp-zero
-      require("nvchad.configs.lspconfig").defaults()
-      require "configs.lspconfig"
-    end,
   },
   {
     "williamboman/mason.nvim",

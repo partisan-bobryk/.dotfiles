@@ -105,4 +105,3 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Load local overrides
 [[ -f "$HOME/.zshrc.local" ]] && source $HOME/.zshrc.local
-
